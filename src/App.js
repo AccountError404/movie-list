@@ -1,6 +1,6 @@
 //import logo from './logo.svg'; (from default react app)
 import './App.css';
-import Header from './Header';
+import Footer from './Footer';
 
 
 import Nav from 'react-bootstrap/Nav';
@@ -9,6 +9,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import Card from 'react-bootstrap/Card';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -16,6 +17,7 @@ import { faVideo, faHeart } from '@fortawesome/free-solid-svg-icons'
 
 function App() {
   return (
+    <div>
     <Navbar bg="light" expand="lg">
       <Container fluid>
         <Navbar.Brand >  
@@ -26,20 +28,19 @@ function App() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+            <Nav.Link href="#link">???</Nav.Link>
+            <NavDropdown title="Genre" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
-                Another action
+                Anime
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Drama</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
-                Separated link
+                Missing Something?
               </NavDropdown.Item>
             </NavDropdown>
-          </Nav>
-          
+          </Nav>          
          <Container center>
           <Nav>
           <Form className="d-flex">
@@ -53,19 +54,18 @@ function App() {
           </Form>
           </Nav>
          </Container>
-         
-
          <Nav>
-          
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
-            </Nav.Link>
+          <Nav.Link href="#list">My List</Nav.Link>
+          <Nav.Link href="#settings">Settings</Nav.Link>
           </Nav>
-          
-        </Navbar.Collapse>
+         </Navbar.Collapse>
       </Container>
-    </Navbar>
+     </Navbar>
+   
+      <Footer/>
+     </div>
+     
+     
   );
 }
 
